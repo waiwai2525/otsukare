@@ -11,6 +11,19 @@ const stop = () => {
   exitMusic.currentTime = 0;
 };
 
+// ゲーミングエディション！！！！！！！！！！！！！
+const gamingStyle = document.createElement("style");
+gamingStyle.textContent = `
+.gaming {
+  background: linear-gradient(to right, Magenta, yellow, Cyan, Magenta) 0% center/200%;
+  animation: gaming 2s linear infinite;
+}
+@keyframes gaming {
+  100% { background-position-x: 200%; }
+}`;
+document.getElementsByTagName("head")[0].appendChild(gamingStyle);
+document.getElementById("contents").classList.add("gaming");
+
 // 出勤/退勤を押した時の処理
 // ボタンは動的に生成させるため、documentに対してイベントリスナーを追加する
 document.addEventListener("click", (event) => {
