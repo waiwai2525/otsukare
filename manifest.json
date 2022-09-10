@@ -1,0 +1,13 @@
+{
+  "name": "Otsukare",
+  "version": "1.0.2",
+  "manifest_version": 2,
+  "description": "出勤/退勤を押したときに音楽を流す拡張機能です。",
+  "web_accessible_resources": ["music/*.mp3"],
+  "content_scripts": [
+    {
+      "matches": ["https://f.ieyasu.co/timestamp"],
+      "js": ["main.js"]
+    }
+  ]
+}
